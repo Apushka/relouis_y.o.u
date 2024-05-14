@@ -38,10 +38,10 @@ html, body {
 .nav-link,
 .nav-link:hover {
   color: inherit;
+  color: white !important;
 }
 
 .nav-link:hover {
-  opacity: 0.5;
   text-decoration: underline;
 }
 
