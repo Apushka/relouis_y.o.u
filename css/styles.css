@@ -1,0 +1,109 @@
+@font-face {
+  font-family: MyriadPro;
+  src: url('../fonts/MyriadPro-Regular.otf') format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: MyriadPro;
+  src: url('../fonts/MyriadPro-Bold.otf') format("opentype");
+  font-weight: 900;
+}
+
+/* Брендовый цвет текста */
+* {
+  color: var(--bs-rel-pink) !important;
+}
+
+html, body {
+  font-family: MyriadPro, sans-serif !important;
+}
+
+.navbar-nav {
+  width: 100%;
+  flex-direction: row;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item-after:not(:nth-last-child(-n + 2))::after {
+  content: "|";
+  position: absolute;
+  top: 0%;
+  right: 0;
+}
+
+.nav-link,
+.nav-link:hover {
+  color: inherit;
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+.link-secondary:hover {
+  color: black !important;
+  opacity: 1;
+}
+
+.accordion-button {
+  padding-left: 0;
+}
+
+/* Цвет стрелки назначается вручную из --bs-rel-pink */
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23a8999c'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: black;
+  background: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
+  background: none;
+  color: black;
+}
+
+.accordion-button {
+  box-shadow: none !important;
+}
+
+/* .accordion .accordion-item:last-of-type,
+.accordion .accordion-item:last-of-type .accordion-button {
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color) !important;
+} */
+
+.accordion-button::after {
+  padding-right: 20px;
+}
+
+.accordion-body {
+  line-height: 18px;
+  padding-top: 0;
+}
+
+.accordion-body::before {
+  min-height: 20px;
+}
+
+.border-dashed {
+  border: 1px dashed gray;
+}
+
+.gradient {
+  background: linear-gradient(90deg, rgba(221,200,195,1) 0%, rgba(225,199,203,1) 20%, rgba(215,193,207,1) 44%, rgba(206,191,214,1) 63%, rgba(208,215,225,1) 82%, rgba(211,226,231,1) 100%);
+}
+
+@media (max-width: 768px) {
+
+  .nav-item-after:not(:nth-last-child(-n + 2))::after {
+    font-size: 10px;
+  }
+}
