@@ -12,7 +12,7 @@
 
 /* Брендовый цвет текста */
 * {
-  color: var(--bs-rel-pink) !important;
+  color: var(--bs-text-rel-gray) !important;
 }
 
 html, body {
@@ -30,6 +30,7 @@ html, body {
 
 .nav-item-after:not(:nth-last-child(-n + 2))::after {
   content: "|";
+  color: white;
   position: absolute;
   top: 0%;
   right: 0;
